@@ -99,7 +99,7 @@ insert into jugadores(id_equipo, nombre, apellido) values ((select id_equipo fro
 END$$
 DELIMITER 
 
-call sp_agregar_jugador_x_nombre_equipo('Velez','laura','burla');
+call sp_agregar_jugador_x_nombre_equipo('Velez','Juan','Perez');
 
 
 
@@ -144,8 +144,8 @@ begin
 end; $$
 DELIMITER;
 
-insert into jugadores_temp (nombre, apellido) values ('Poffroto','Cudero');
-insert into jugadores_temp (nombre, apellido) values ('Locffo','Gati');
+insert into jugadores_temp (nombre, apellido) values ('Poroto','Cudero');
+insert into jugadores_temp (nombre, apellido) values ('Loco','Gati');
 
 call sp_insertar_equipos_jugadores('SL',@id_nuevo);
 select @id_nuevo;
